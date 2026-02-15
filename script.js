@@ -55,8 +55,10 @@ form.addEventListener('submit', function(e) {
   const bmiRange = getBMIRange(age, gender);
   const minWeight = (heightM * heightM * bmiRange.min).toFixed(1);
   const maxWeight = (heightM * heightM * bmiRange.max).toFixed(1);
+  const minBMI = bmiRange.min.toFixed(1);
+  const maxBMI = bmiRange.max.toFixed(1);
 
-  resultDiv.textContent = `あなたの適正体重の範囲は約${minWeight} kg～${maxWeight} kgです`;
+  resultDiv.textContent = `あなたの適正体重の範囲は約${minWeight} kg～${maxWeight} kgです（BMI: ${minBMI}～${maxBMI}）`;
 });
 
 resetBtn.addEventListener('click', function() {
