@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>適正体重計算機</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>適正体重計算機</h1>
+    <form id="weightForm" novalidate>
+      <div class="form-group">
+        <label for="age">年齢</label>
+        <input type="number" id="age" name="age" min="0" max="120" required placeholder="例: 30">
+      </div>
+      <div class="form-group">
+        <label for="gender">性別</label>
+        <select id="gender" name="gender" required>
+          <option value="">選択してください</option>
+          <option value="male">男性</option>
+          <option value="female">女性</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="height">身長 (cm)</label>
+        <input type="number" id="height" name="height" min="100" max="250" required placeholder="例: 170">
+      </div>
+      <div class="button-group">
+        <button type="submit">計算</button>
+        <button type="button" id="resetBtn">リセット</button>
+      </div>
+      <div id="error" class="error-message"></div>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
